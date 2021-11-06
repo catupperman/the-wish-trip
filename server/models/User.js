@@ -1,4 +1,4 @@
-const { Schema } = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 const userSchema = new Schema({
     email: {
@@ -37,13 +37,13 @@ const userSchema = new Schema({
         required: true,
         trim: true
     },
-    savedTrips: [tripsSchema]
-},
-    {
-        toJSON: {
-            virtuals: true,
+    savedTrips: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Trips'
         },
-    }
+    ]
+}
 );
 
 userSchema.pre('save', async function (next) {
@@ -58,6 +58,7 @@ userSchema.pre('save', async function (next) {
 userSchema.methods.isCorrectPassword = async function (password) {
     return bcrypt.compare(password, this.password);
 };
+
 
 const User = model('User', userSchema);
 

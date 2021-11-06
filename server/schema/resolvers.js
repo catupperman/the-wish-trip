@@ -12,7 +12,7 @@ const resolvers = {
             throw new AuthenticationError("Not logged in.")
         }
     },
-    Mutaion: {
+    Mutation: {
         addUser: async (parent, args) => {
             const newUser = await User.create(args);
             const token = signToken(newUser);
@@ -55,3 +55,5 @@ const resolvers = {
         },
     },
 };
+
+module.exports = resolvers;

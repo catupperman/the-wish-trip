@@ -16,16 +16,16 @@ type User {
 type Trips {
     name: String
     destination: String
-    tripDate: String
-    budget: String
+    tripDate: Int
+    budget: Int
     savedFlight: [Flights]
     savedHotel: [Hotels]
 }
 
 type Hotels {
     name: String
-    loacation: String
-    rate: Number
+    location: String
+    rate: Int
     photo: String
 }
 
@@ -39,18 +39,18 @@ type Query {
     me: User
 }
 
-type Mutations {
+type Mutation {
     login(email: String!, password: String!): Auth
     addUser(email: String!, password: String!): Auth
     savedTrip(input: TripInput!): User
-    deleteTrip(tripId: String!): User
+    deleteTrip(_id: String!): User
 }
 
 input TripInput {
     name: String
     destination: String
     tripDate: String
-    budget: Number
+    budget: Int
 }
 
 type Auth {
