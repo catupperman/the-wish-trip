@@ -5,7 +5,11 @@ const hotelSchema = new Schema({
         type: String,
         required: true
     },
-    location: {
+    starRating: {
+        type: Number,
+        required: true
+    },
+    description: {
         type: String,
         required: true
     },
