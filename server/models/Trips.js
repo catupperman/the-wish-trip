@@ -1,4 +1,4 @@
-const { Schema } = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 const tripsSchema = new Schema({
     name: {
@@ -17,8 +17,18 @@ const tripsSchema = new Schema({
         type: Number,
         required: true
     },
-    savedFlight: [flightSchema],
-    savedHotel: [hotelSchema]
+    savedFlight: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Flights'
+        }
+    ],
+    savedHotel: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Hotels'
+        }
+    ]
 });
 
 const Trips = model("Trips", tripsSchema);
