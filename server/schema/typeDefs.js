@@ -48,7 +48,6 @@ type Mutations {
 
 input TripInput {
     name: String
-    tripId: String
     destination: String
     tripDate: String
     budget: Number
