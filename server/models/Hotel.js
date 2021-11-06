@@ -10,7 +10,7 @@ const hotelSchema = new Schema({
         required: true
     },
     rate: {
-        type: String,
+        type: Number,
         required: true
     },
     photo: {
