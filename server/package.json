@@ -12,7 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "apollo-server-express": "^3.4.0",
+<<<<<<< HEAD
     "axios": "^0.24.0",
+=======
+>>>>>>> 547d55435f7736197c427c9008e20171388e6cd7
     "bcrypt": "^4.0.1",
     "express": "^4.17.1",
     "graphql": "^15.5.0",
