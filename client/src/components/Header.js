@@ -2,17 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 
 const Header = ({ currentPage, handlePageChange }) => {
-    const [open, setOpen] = useState(false);
-
-    const hamburgerIcon =   <FaBars 
-    className="mobile-icon"
-    onClick={() => setOpen(!open)}
-    />
-
-    const closeIcon =   <MdOutlineClose
-    className="mobile-icon"
-    onClick={() => setOpen(!open)}
-    />
+    // const [open, setOpen] = useState(false);
 
     return (
         <>
@@ -20,7 +10,6 @@ const Header = ({ currentPage, handlePageChange }) => {
            <header class="header">
                The Wish Trip
                </header> 
-               {open ? closeIcon : hamburgerIcon}
         </nav>
         </>
     )
