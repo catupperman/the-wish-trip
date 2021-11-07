@@ -12,7 +12,7 @@ const resolvers = {
             throw new AuthenticationError("Not logged in.")
         }
     },
-    Mutaion: {
+    Mutation: {
         addUser: async (parent, args) => {
             const newUser = await User.create(args);
             const token = signToken(newUser);
@@ -46,7 +46,7 @@ const resolvers = {
             if (context.user) {
                 const updatedUser = await User.findOneAndUpdate(
                     { _id: context.user._id },
-                    { $pull: { savedTrips: { tripId: args.tripId } } },
+                    { $pull: { savedTrips: { _id: args.trip._id } } },
                     { new: true }
                 );
                 return updatedUser;

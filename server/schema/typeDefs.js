@@ -39,11 +39,11 @@ type Query {
     me: User
 }
 
-type Mutations {
+type Mutation {
     login(email: String!, password: String!): Auth
     addUser(email: String!, password: String!): Auth
     savedTrip(input: TripInput!): User
-    deleteTrip(tripId: String!): User
+    deleteTrip(_id: String!): User
 }
 
 input TripInput {
@@ -51,7 +51,7 @@ input TripInput {
     tripId: String
     destination: String
     tripDate: String
-    budget: Number
+    budget: Int
 }
 
 type Auth {
