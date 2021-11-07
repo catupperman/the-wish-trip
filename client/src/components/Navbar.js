@@ -6,9 +6,17 @@ const AppNavbar = () => {
     // set modal display state
     const [showModal, setShowModal] = useState(false);
     return (
-        <>
-        Hello, World?
-        </>
+       <ul className="nav nav-tabs">
+           <li className="nav-item">
+           {/* <a
+                href="#ContactUs"
+                onClick={() => handlePageChange('ContactUs')}
+                className={'ContactUs'}
+                >
+                    Contact Us
+                </a> */}
+           </li>
+       </ul>
     );
 };
 
