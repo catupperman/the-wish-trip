@@ -13,36 +13,10 @@ const userSchema = new Schema({
         required: true,
         trim: true,
     },
-    firstName: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    lastName: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    adress: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    city: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    state: {
-        type: String,
-        required: true,
-        trim: true
-    },
-    savedTrips: [tripsSchema]
-},
-    {
-        toJSON: {
-            virtuals: true,
+    savedTrips: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Trips'
         },
     }
 );

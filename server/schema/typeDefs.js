@@ -5,11 +5,6 @@ type User {
     _id: ID
     email: String
     password: String
-    firstName: String
-    lastName: String
-    adress: String
-    city: String
-    state: String
     savedTrips: [Trips]
 }
 
@@ -24,15 +19,20 @@ type Trips {
 
 type Hotels {
     name: String
-    loacation: String
-    rate: Number
+    starRating: Int
+    description: String
+    rate: Int
     photo: String
 }
 
 type Flights {
     airLine: String
-    recordLocator: String
     airportCode: String
+    cabinName: String
+    totalFare: Int
+    departueDate: Int
+    flightDuration: Int
+    originAirport: String
 }
 
 type Query {
