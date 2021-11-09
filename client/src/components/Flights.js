@@ -6,12 +6,12 @@ import { saveTrip, SearchFlights } from '../utils/API';
 
 
 const Flights = () => {
-
-    const [results, setResults] = useState([]);
+    const [searchedFlights, setSearchedFlights] = useState([]);
+    const [searchInput, setSearchInput] = useState('');
 
     const searchFlights = async (query) => {
         const response = await SearchFlights(query);
-        setResults(response.data.data);
+        setSearchedFlights(response.data.data);
     };
 
     useEffect(() => {
@@ -33,6 +33,11 @@ const Flights = () => {
             }
             const { items } = await response.json();
 
+            const flightData = items.map((flight) => ({
+                flightId: flight.id
+
+            }))
+
             setSearchedFlights(flightData)
 
         } catch (err) {
@@ -42,8 +47,31 @@ const Flights = () => {
 
     return (
         <>
-            
+           
+                <Contianer>
+                    <h1>Search for Flights!</h1>
+                    <Form onSubmit={handleFormSubmit}>
+                    <Form.Row>
+              <Col xs={12} md={8}>
+                <Form.Control
+                  name='searchInput'
+                  value={searchInput}
+                  onChange={(e) => setSearchInput(e.target.value)}
+                  type='text'
+                  size='lg'
+                  placeholder='Search for Flights'
+                />
+              </Col>
+              <Col xs={12} md={4}>
+                <Button type='submit' variant='success' size='lg'>
+                  Submit Search
+                </Button>
+              </Col>
+            </Form.Row>
+                    </Form>
             <SearchFlights results={results} />
+            </Contianer>
+           
         </>
     )
 }
