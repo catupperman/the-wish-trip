@@ -1,20 +1,25 @@
 import { useState, useEffect } from 'react';
 
-import search from '../utils/API';
+import SearchFlights from '../utils/API';
 
 const Flights = () => {
   // // Declare a new state variable "results"
-  // const [results, setResults] = useState([]);
+   const [results, setResults] = useState([]);
 
-  // // Method to get search results and set state
-  // const searchFlights = async () => {
-  //   const response = await search();
+   const searchFlights = async (query) => {
+    const response = await SearchFlights(query);
+    setResults(response.data.data);
+  };
 
-  // }
+  useEffect(() => {
+    searchFlights();
+  }, []);
   return (
     <div>
-      search
+      <SearchFlights results={results} />
     </div>
   )
 
 }
+
+export default Flights;
