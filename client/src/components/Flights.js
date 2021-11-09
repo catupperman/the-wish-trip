@@ -6,52 +6,85 @@ import { saveTrip, SearchFlights } from '../utils/API';
 
 //Complies the build onto the page
 const Flights = () => {
-    const [searchedFlights, setSearchedFlights] = useState([]);
-    const [searchInput, setSearchInput] = useState('');
 
-    const searchFlights = async (query) => {
-        const response = await SearchFlights(query);
-        setSearchedFlights(response.data.data);
-    };
-    //allows for connection between api and react webpage
+    const [error, setError] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [flights, setFLights] = useState([]);
+
     useEffect(() => {
-        searchFlights();
-    }, []);
-
-    const handleFormSubmit = async (event) => {
-        event.preventDefault();
-        //if there is no input, nothing happens on the screen, prevents default
-        if (!searchInput) {
-            return false;
+        fetch("https://priceline-com-provider.p.rapidapi.com/v1/flights/locations?name=Dublin&x-rapidapi-host=priceline-com-provider.p.rapidapi.com&x-rapidapi-key=ddd578e581msh5c1096c3181d1a0p1d59c8jsn253cf63240a9").then(res => res.json()).then((result) => {
+            setIsLoaded(true);
+            setFLights(result);
+        },
+        (error) => {
+            setIsLoaded(true);
+            setError(error);
         }
+        )
+    }, [])
 
-        try {
-            const response = await SearchFlights(searchInput);
-
-            if (!response.ok) {
-                throw new Error('something went wrong!');
-            }
-            //turns requests into json
-            const { items } = await response.json();
-            //specific data from the API, and directed
-            //TODO: FIX THIS MANIPULATION MESS
-            const flightData = items.map((flight) => ({
-                flightId: flight.id
-
-            }))
-            //combines the data into a nice neat package?
-            setSearchedFlights(flightData)
-
-        } catch (err) {
-            console.error(err);
-        }
+    if(error) {
+    return <div> Error: {error.message}</div>;
+    } else if (!isLoaded) {
+        return <div> Loading....</div>
+    } else {
+        return (
+            <ul>
+                {flights.map(flights => (
+                    <li key={flights.id}>
+                        {flights.name}
+                    </li>
+                ))}
+            </ul>
+        )
     }
+}    // const [searchedFlights, setSearchedFlights] = useState([]);
+    // const [searchInput, setSearchInput] = useState('');
 
-    return (
-        <>
+    // const searchFlights = async (query) => {
+    //     const response = await SearchFlights(query);
+    //     setSearchedFlights(response.data.data);
+    // };
+    // //allows for connection between api and react webpage
+    // useEffect(() => {
+    //     searchFlights();
+    // }, []);
 
-            <Contianer>
-                <h1>Search for Flights!</h1>
+    // const handleFormSubmit = async (event) => {
+    //     event.preventDefault();
+    //     //if there is no input, nothing happens on the screen, prevents default
+    //     if (!searchInput) {
+    //         return false;
+    //     }
+
+    //     try {
+    //         const response = await SearchFlights(searchInput);
+
+    //         if (!response.ok) {
+    //             throw new Error('something went wrong!');
+    //         }
+    //         //turns requests into json
+    //         const { items } = await response.json();
+    //         //specific data from the API, and directed
+    //         //TODO: FIX THIS MANIPULATION MESS
+    //         const flightData = items.map((flight) => ({
+    //             flightId: flight.id
+
+
+    //         }))
+    //         //combines the data into a nice neat package?
+    //         setSearchedFlights(flightData)
+
+    //     } catch (err) {
+    //         console.error(err);
+    //     }
+    // }
+
+    // return (
+    //     <>
+
+           
+                {/* <h1>Search for Flights!</h1>
                 <Form onSubmit={handleFormSubmit}>
                     <Form.Row>
                         <Col xs={12} md={8}>
@@ -70,12 +103,12 @@ const Flights = () => {
                 </Button>
                         </Col>
                     </Form.Row>
-                </Form>
-                <SearchFlights results={results} />
-            </Contianer>
+                </Form> */}
+                {/* <SearchFlights />
+            
 
-        </>
-    )
-}
+        </> */}
+//     )
+// }
 
 export default Flights;

@@ -32,7 +32,7 @@ class AuthService {
 
     logout() {
         localStorage.removeItem('id_token');
-        wondow.location.assign('/');
+        window.location.assign('/');
     }
 }
 

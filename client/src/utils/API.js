@@ -1,53 +1,6 @@
 import axios from 'axios';
+import React from 'react';
 
-export const getMe = (token) => {
-   return fetch('/api/users/me', {
-     headers: {
-       'Content-Type': 'application/json',
-       authorization: `Bearer ${token}`,
-     },
-   });
- };
-
- export const createUser = (userData) => {
-   return fetch('/api/users', {
-     method: 'POST',
-     headers: {
-       'Content-Type': 'application/json',
-     },
-     body: JSON.stringify(userData),
-   });
- };
- 
- export const loginUser = (userData) => {
-   return fetch('/api/users/login', {
-     method: 'POST',
-     headers: {
-       'Content-Type': 'application/json',
-     },
-     body: JSON.stringify(userData),
-   });
- };
-
- export const saveTrip = (tripData, token) => {
-   return fetch('/api/users', {
-     method: 'PUT',
-     headers: {
-       'Content-Type': 'application/json',
-       authorization: `Bearer ${token}`,
-     },
-     body: JSON.stringify(tripData),
-   });
- };
-
- export const deleteTrip = (tripId, token) => {
-   return fetch(`/api/users/books/${tripId}`, {
-     method: 'DELETE',
-     headers: {
-       authorization: `Bearer ${token}`,
-     },
-   });
- };
 // var axios = require("axios").default;
 // ​
 // gets ids for locations named "Dublin"
