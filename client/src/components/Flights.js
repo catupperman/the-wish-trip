@@ -1,32 +1,32 @@
-import { useState, useEffect } from 'react';
-import { Jumbotron, Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
-//pretty sure I'm going to need this, ask John-Mark
-import Auth from '../utils/auth';
-import { saveTrip, SearchFlights } from '../utils/API';
+// import { useState, useEffect } from 'react';
+// import { Jumbotron, Container, Col, Form, Button, Card, CardColumns } from 'react-bootstrap';
+// //pretty sure I'm going to need this, ask John-Mark
+// import Auth from '../utils/auth';
+// import { saveTrip, SearchFlights } from '../utils/API';
 
-//Complies the build onto the page
-const Flights = () => {
+// //Complies the build onto the page
+// const Flights = () => {
 
-    const [error, setError] = useState(null);
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [flights, setFlights] = useState([]);
-    const [searchInput, setSearchInput] = useState('');
-    const isEmpty = (arr) => !Array.isArray(arr) || arr.length === 0;
+//     const [error, setError] = useState(null);
+//     const [isLoaded, setIsLoaded] = useState(false);
+//     const [flights, setFlights] = useState([]);
+//     const [searchInput, setSearchInput] = useState('');
+//     const isEmpty = (arr) => !Array.isArray(arr) || arr.length === 0;
 
-    const handleFormSubmit = async (event) => {
-        event.preventDefault()
-        try {
-            const { data } = await submit({
-                variables: {
-                    ...searchInput
-                }
-            });
-        }
-        catch (error) {
-            console.log(error);
-        }
-        setSearchInput('');
-    }
+//     const handleFormSubmit = async (event) => {
+//         event.preventDefault()
+//         try {
+//             const { data } = await submit({
+//                 variables: {
+//                     ...searchInput
+//                 }
+//             });
+//         }
+//         catch (error) {
+//             console.log(error);
+//         }
+//         setSearchInput('');
+//     }
 
     //results[0].id
 
@@ -113,96 +113,96 @@ const Flights = () => {
     //     console.error(err);
     // });
 
-    if (error) {
-        return <div> Error: {error.message}</div>;
-    } else if (!isLoaded) {
-        return <div> Loading....</div>
-    } else if (isEmpty(flights)) {
-        return <div>"no flights"</div>
-    } else {
-        return (
-            <Container>
-                <h1>Search for Flights!</h1>
-                <Form onSubmit={handleFormSubmit}>
-                    <Form.Row>
-                        <Col xs={12} md={8}>
-                            <Form.Control
-                                name='travelingFrom'
-                                value={searchInput}
-                                onChange={(e) => setSearchInput(e.target.value)}
-                                type='text'
-                                size='lg'
-                                placeholder='Search for Flights'
-                            />
-                        </Col>
-                        <Col xs={12} md={8}>
-                            <Form.Control
-                                name='travelingTo'
-                                value={searchInput}
-                                onChange={(e) => setSearchInput(e.target.value)}
-                                type='text'
-                                size='lg'
-                                placeholder='Search for Flights'
-                            />
-                        </Col>
-                        <Col xs={12} md={8}>
-                            <Form.Control
-                                name='departureDate'
-                                value={searchInput}
-                                onChange={(e) => setSearchInput(e.target.value)}
-                                type='text'
-                                size='lg'
-                                placeholder='Search for Flights'
-                            />
-                        </Col>
-                        <Col xs={12} md={8}>
-                            <Form.Control
-                                name='returnDate'
-                                value={searchInput}
-                                onChange={(e) => setSearchInput(e.target.value)}
-                                type='text'
-                                size='lg'
-                                placeholder='Search for Flights'
-                            />
-                        </Col>
-                        <Col xs={12} md={8}>
-                            <Form.Control
-                                name='passengers'
-                                value={searchInput}
-                                onChange={(e) => setSearchInput(e.target.value)}
-                                type='text'
-                                size='lg'
-                                placeholder='Search for Flights'
-                            />
-                        </Col>
-                        <Col xs={12} md={8}>
-                            <Form.Control
-                                name='maxTicketPrice'
-                                value={searchInput}
-                                onChange={(e) => setSearchInput(e.target.value)}
-                                type='text'
-                                size='lg'
-                                placeholder='Search for Flights'
-                            />
-                        </Col>
-                        <Col xs={12} md={4}>
-                            <Button type='submit' variant='success' size='lg'>
-                                Submit Search
-            </Button>
-                        </Col>
-                    </Form.Row>
-                </Form>
-                <ul>
-                    {flights.map(flights => (
-                        <li key={flights.id}>
-                            {flights.name}
-                        </li>
-                    ))}
-                </ul>
-            </Container>
-        )
-    }
-}
+//     if (error) {
+//         return <div> Error: {error.message}</div>;
+//     } else if (!isLoaded) {
+//         return <div> Loading....</div>
+//     } else if (isEmpty(flights)) {
+//         return <div>"no flights"</div>
+//     } else {
+//         return (
+//             <Container>
+//                 <h1>Search for Flights!</h1>
+//                 <Form onSubmit={handleFormSubmit}>
+//                     <Form.Row>
+//                         <Col xs={12} md={8}>
+//                             <Form.Control
+//                                 name='travelingFrom'
+//                                 value={searchInput}
+//                                 onChange={(e) => setSearchInput(e.target.value)}
+//                                 type='text'
+//                                 size='lg'
+//                                 placeholder='Search for Flights'
+//                             />
+//                         </Col>
+//                         <Col xs={12} md={8}>
+//                             <Form.Control
+//                                 name='travelingTo'
+//                                 value={searchInput}
+//                                 onChange={(e) => setSearchInput(e.target.value)}
+//                                 type='text'
+//                                 size='lg'
+//                                 placeholder='Search for Flights'
+//                             />
+//                         </Col>
+//                         <Col xs={12} md={8}>
+//                             <Form.Control
+//                                 name='departureDate'
+//                                 value={searchInput}
+//                                 onChange={(e) => setSearchInput(e.target.value)}
+//                                 type='text'
+//                                 size='lg'
+//                                 placeholder='Search for Flights'
+//                             />
+//                         </Col>
+//                         <Col xs={12} md={8}>
+//                             <Form.Control
+//                                 name='returnDate'
+//                                 value={searchInput}
+//                                 onChange={(e) => setSearchInput(e.target.value)}
+//                                 type='text'
+//                                 size='lg'
+//                                 placeholder='Search for Flights'
+//                             />
+//                         </Col>
+//                         <Col xs={12} md={8}>
+//                             <Form.Control
+//                                 name='passengers'
+//                                 value={searchInput}
+//                                 onChange={(e) => setSearchInput(e.target.value)}
+//                                 type='text'
+//                                 size='lg'
+//                                 placeholder='Search for Flights'
+//                             />
+//                         </Col>
+//                         <Col xs={12} md={8}>
+//                             <Form.Control
+//                                 name='maxTicketPrice'
+//                                 value={searchInput}
+//                                 onChange={(e) => setSearchInput(e.target.value)}
+//                                 type='text'
+//                                 size='lg'
+//                                 placeholder='Search for Flights'
+//                             />
+//                         </Col>
+//                         <Col xs={12} md={4}>
+//                             <Button type='submit' variant='success' size='lg'>
+//                                 Submit Search
+//             </Button>
+//                         </Col>
+//                     </Form.Row>
+//                 </Form>
+//                 <ul>
+//                     {flights.map(flights => (
+//                         <li key={flights.id}>
+//                             {flights.name}
+//                         </li>
+//                     ))}
+//                 </ul>
+//             </Container>
+//         )
+//     }
+// }
 
 
-export default Flights;
+// export default Flights;

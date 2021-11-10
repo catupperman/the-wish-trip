@@ -42,7 +42,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <>
-          <LoginForm />
+          <Header />
         </>
       </Router>
     </ApolloProvider>
