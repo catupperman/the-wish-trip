@@ -14,16 +14,7 @@ type Trips {
     tripDate: Int
     budget: Int
     savedFlight: [Flights]
-    // savedHotel: [Hotels]
 }
-
-// type Hotels {
-//     name: String
-//     starRating: Int
-//     description: String
-//     rate: Int
-//     photo: String
-// }
 
 type Flights {
     airLine: String
