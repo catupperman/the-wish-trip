@@ -22,13 +22,7 @@ const tripsSchema = new Schema({
             type: Schema.Types.ObjectId,
             ref: 'Flights'
         }
-    ],
-    // savedHotel: [
-    //     {
-    //         type: Schema.Types.ObjectId,
-    //         ref: 'Hotels'
-    //     }
-    // ]
+    ]
 });
 
 const Trips = model("Trips", tripsSchema);
