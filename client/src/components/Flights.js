@@ -10,7 +10,23 @@ const Flights = () => {
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [flights, setFlights] = useState([]);
+    const [searchInput, setSearchInput] = useState('');
     const isEmpty = (arr) => !Array.isArray(arr) || arr.length === 0;
+
+    const handleFormSubmit = async (event) => {
+        event.preventDefault()
+        try {
+            const { data } = await submit({
+                variables: {
+                    ...searchInput
+                }
+            });
+        }
+        catch (error) {
+            console.log(error);
+        }
+        setSearchInput('');
+    }
 
     //results[0].id
 
@@ -95,22 +111,7 @@ const Flights = () => {
     // })
     // .catch(err => {
     //     console.error(err);
-    // }).then(res => res.json())
-    //         .then((result) => {
-    //             console.log("all good")
-    //             setIsLoaded(true);
-    //             setFlights(result);
-    //             setError(null);
-
-    //         })
-    //         .catch(error => {
-    //             console.log("all bad")
-    //             setIsLoaded(true);
-    //             setError(error);
-    //             setFlights([]);
-    //         }
-    //         )
-    // }, []);
+    // });
 
     if (error) {
         return <div> Error: {error.message}</div>;
