@@ -6,8 +6,8 @@ const Header = ({ currentPage, handlePageChange }) => {
 
     return (
         <>
-        <nav class="nav">
-           <header class="header">
+        <nav className="nav">
+           <header className="header">
                The Wish Trip
                </header> 
         </nav>
