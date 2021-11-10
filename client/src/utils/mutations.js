@@ -43,13 +43,13 @@ mutation savedTrip($input: TripInput!) {
                 flightDuration
                 originAirport
             }
-            savedHotel {
-                name
-                starRating
-                description
-                rate
-                photo
-            }
+            // savedHotel {
+            //     name
+            //     starRating
+            //     description
+            //     rate
+            //     photo
+            // }
         }
     }
 }
@@ -74,13 +74,13 @@ mutation deleteTrip($_id: String!) {
                 flightDuration
                 originAirport
             }
-            savedHotel {
-                name
-                starRating
-                description
-                rate
-                photo
-            }
+            // savedHotel {
+            //     name
+            //     starRating
+            //     description
+            //     rate
+            //     photo
+            // }
         }
     }
 }
