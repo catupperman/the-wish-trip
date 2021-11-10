@@ -8,7 +8,7 @@ const AppNavbar = () => {
     return (
         <>
             <Navbar>
-                <Conatiner>
+                <Container>
                     <ul className="nav nav-tabs">
                         <li className="nav-item">
                             {/* <a
@@ -28,7 +28,7 @@ const AppNavbar = () => {
                         </li>
                         {/* These Two will eventually toggle away as a User has signed in or signed up to show "My Trips" as a button instead */}
                     </ul>
-                </Conatiner>
+                </Container>
             </Navbar>
         </>
     );
