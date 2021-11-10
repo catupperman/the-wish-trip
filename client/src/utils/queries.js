@@ -19,13 +19,13 @@ export const GET_ME = gql`
                 flightDuration
                 originAirport
             }
-            savedHotel {
-                name
-                starRating
-                description
-                rate
-                photo
-            }
+            // savedHotel {
+            //     name
+            //     starRating
+            //     description
+            //     rate
+            //     photo
+            // }
         }
     }
 }`
