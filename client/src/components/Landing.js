@@ -5,7 +5,7 @@ import background from './assets/images/landingBackdrop.jpeg';
 const LandingPage = () => {
     return (
 
-        <div style={{ backgroundImage: `url(${background})`, height: '100%' }}>
+        <div clasName="backgroundImage" style={{ backgroundImage: `url(${background})`, backgroundRepeat: "no-repeat", backgroundSize: "contain", height: 2000, width: 2000 }}>
 
             {/* <div style={{ alignContent: 'center' }}> */}
             <Button >
