@@ -1,11 +1,12 @@
 import React from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import background from './assets/images/landingBackdrop.jpeg';
+import '../styles/Landing.css';
 
 const LandingPage = () => {
     return (
 
-        <div clasName="backgroundImage" style={{ backgroundImage: `url(${background})`, backgroundRepeat: "no-repeat" }}>
+        <div clasName="backgroundImage" style={{ backgroundImage: `url(${background})` }}>
 
             {/* <div style={{ alignContent: 'center' }}> */}
             <Button>
