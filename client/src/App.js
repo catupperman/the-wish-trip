@@ -49,10 +49,8 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <>
-          {/* <Navbar /> */}
-          <Header />
-          <Landing_V2 />
-          <Footer />
+          <Navbar />
+          <Landing_Page />
           {/* <LoginForm /> */}
         </>
       </Router>
