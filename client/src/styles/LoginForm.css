@@ -1,15 +1,16 @@
 .login-form {
   position: absolute;
   top: 20%;
-  left: 20%;
+  left: 15%;
 }
 
-.login-form-email-label {
+.login-form-email-label, .login-form-password-label {
   color: whitesmoke;
   font-size: 1.25em;
   font-weight: 500;
+  margin-top: 10px;
 }
 
-.login-form-email-input {
-
+.login-form-email-input, .login-form-password-input {
+  margin-bottom: 10px;
 }
