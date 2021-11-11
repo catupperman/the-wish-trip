@@ -10,8 +10,8 @@ const Header = ({ currentPage, handlePageChange }) => {
       <>
         <nav className="navbar">
           <div className="container-fluid d-flex">
-            <a className="navbar-brand" href="#">The Wish Trip</a>
-            <button className="btn btn-sm btn-outline-light bg-transparent shadow-sm">Log Out</button>
+            <a className="navbar-brand brand-text" href="#">The Wish Trip</a>
+            <button className="btn btn-sm btn-outline-light bg-transparent shadow-sm logout-button">Log Out</button>
           </div>
         </nav>
       </>

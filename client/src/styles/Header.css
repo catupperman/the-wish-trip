@@ -8,23 +8,23 @@
   justify-content: space-between;
 }
 
-a {
+.brand-text {
   color: whitesmoke;
   font-weight: 400;
 }
 
-a:hover {
+.brand-text:hover {
   color: white;
   text-shadow: white 1px 0 10px;
 }
 
-button {
+.logout-button {
   color: whitesmoke !important;
   border-color: whitesmoke !important;
   font-weight: 400;
 }
 
-button:hover {
+.logout-button:hover {
   color: white !important;
   text-shadow: white 1px 0 10px;
   border-color: white !important;
