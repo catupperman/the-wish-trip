@@ -18,7 +18,7 @@
 .landing-button-group {
   position: absolute;
   width: 80%;
-  left: 40%;
+  left: 30%;
   top: 20%;
 }
 
@@ -42,4 +42,28 @@
   border-color: white !important;
   box-shadow: 0 0 5px white !important;
   box-shadow: inner 0 0 5px white !important;
+}
+
+/*
+ * MEDIA QUERIES
+ */
+
+/* display button group column on narrow viewports */
+@media screen and (max-width: 586px) {
+  .landing-button-group {
+    flex-direction: column;
+    text-align: center;
+    left: 40%;
+    justify-content: center;
+  }
+  .landing-signup-button {
+    margin-bottom: 20px;
+    width: fit-content;
+    margin-right: 0px;
+  }
+  .landing-signin-button {
+    width: fit-content;
+    margin-left: 0px;
+
+  }
 }
