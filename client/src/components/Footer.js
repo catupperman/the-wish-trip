@@ -14,10 +14,10 @@ export default function Footer() {
 
             {/* left side */}
             <div className="col">
-              <h5>
+              <h5 className="footer-brand-name">
                 The Wish Trip
               </h5>
-              <p>
+              <p className="footer-description">
                 Let us help you turn your wish into a trip!
               </p>
             </div>

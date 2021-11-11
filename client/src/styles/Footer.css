@@ -24,12 +24,13 @@ li {
   padding-top: 1em;
 }
 
-h5, p {
+.footer-brand-name, .footer-description, .icon-header  {
   color: whitesmoke;
 }
 
 .copyright-line {
   padding-left: 0em;
+  color: whitesmoke;
 }
 
 
