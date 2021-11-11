@@ -24,7 +24,7 @@ export default function Footer() {
 
             {/* right side */}
             <div className="col">
-              <h5>
+              <h5 className="icon-header">
                 Contact Us!
               </h5>
               <ul className="icon-set d-flex">
