@@ -3,3 +3,13 @@
   top: 20%;
   left: 20%;
 }
+
+.login-form-email-label {
+  color: whitesmoke;
+  font-size: 1.25em;
+  font-weight: 500;
+}
+
+.login-form-email-input {
+
+}
