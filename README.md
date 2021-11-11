@@ -27,7 +27,7 @@
 > This project was built with the aspirations to build a full stack application, that would allow a user to fully interact with several avenues for travel all in one convienent app. With so many different sites, and choices for travel, the goal was to combine all the elements of a travel agent convienently in one place. 
 
 <p align="center">
-  <img width="560" height="400" src="images/demo.gif">
+  <img width="560" height="400" src="">
 </p>
 
 
@@ -62,5 +62,5 @@ Copyright (C) 2021 kira-cat-johnmark-shobair
 * email: Cat: catupperman@gmail.com, Kira: jseventeen41@gmail.com, John-Mark: jmsackett91@gmail.com
 * Prefered Contact: Email or GitHub
 <p align="center">
-  <img width="460" height="300" src = "images/owl.gif">
+  <img width="460" height="300" src = "">
 </p>
