@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Landing_V2.css';
 
-export default function() {
+export default function LandingV2() {
   return (
     <>
       <div className="hero-area">

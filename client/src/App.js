@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import Flights from './components/Flights';
 import LoginForm from './components/LoginForm';
 import LandingPage from './components/Landing';
-import LandingPage_V2 from './components/Landing_V2';
+import Landing_V2 from './components/Landing_V2';
 
 
 
