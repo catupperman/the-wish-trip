@@ -1,9 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Landing_V2.css';
-import ComponentChange from '../ComponentContainer';
 
-export default function LandingV2() {
+export default function LandingV2({ currentPage, ComponentChange }) {
   return (
     <>
       <div className="hero-area">
