@@ -26,7 +26,7 @@ export default function Footer() {
               <h5>
                 Contact Us!
               </h5>
-              <ul className="icon-set">
+              <ul className="icon-set d-flex">
                 
                 {/* Cat */}
                 <li><a href="https://github.com/catupperman" target="_blank"><img src="https://avatars.githubusercontent.com/u/84750356?v=4" alt="catupperman" title="Cat"/></a></li>
@@ -39,9 +39,11 @@ export default function Footer() {
 
               </ul>
             </div>
+
           </div>
         </div>
       </footer>
+      
     </>
   );
 } 
