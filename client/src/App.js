@@ -18,6 +18,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import Landing_V2 from './components/Landing_V2';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -50,7 +51,7 @@ function App() {
         <>
           {/* <Navbar /> */}
           <Header />
-          <LandingPage_V2 />
+          <Landing_V2 />
           <Footer />
           {/* <LoginForm /> */}
         </>

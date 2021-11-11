@@ -7,7 +7,6 @@ export default function Footer() {
     <>
 
       {/* footer */}
-      <br/>
       <footer>
         <div className="container">
           
