@@ -27,3 +27,23 @@ img {
 h5, p {
   color: whitesmoke;
 }
+
+.copyright-line {
+  padding-left: 0em;
+}
+
+
+/*
+ * MEDIA QUERIES
+ */
+
+/* display footer as column and center text on narrow viewports */
+@media screen and (max-width: 586px) {
+  .row, .copyright-line {
+    flex-direction: column;
+    text-align: center;
+  }
+  ul {
+    justify-content: center;
+  }
+}

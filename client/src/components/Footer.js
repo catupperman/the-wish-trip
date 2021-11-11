@@ -10,6 +10,7 @@ export default function Footer() {
       <br/>
       <footer>
         <div className="container">
+          
           <div className="row">
 
             {/* left side */}
@@ -42,6 +43,14 @@ export default function Footer() {
             </div>
 
           </div>
+
+          {/* copyright */}
+          <div>
+            <div className="container copyright-line">
+              <p>Copyright © 2021</p>
+            </div>
+          </div>
+
         </div>
       </footer>
 
