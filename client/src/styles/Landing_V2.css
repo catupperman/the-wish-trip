@@ -10,3 +10,36 @@
   /* top: 0; */
   /* left: 0; */
 }
+
+.hero-area {
+  position: relative;
+}
+
+.landing-button-group {
+  position: absolute;
+  width: 80%;
+  left: 40%;
+  top: 20%;
+}
+
+.landing-signup-button {
+  /* position: absolute; */
+  /* left: 20%; */
+  /* top: 20%; */
+  margin-right: 50px;
+}
+
+.landing-signin-button {
+  /* position: absolute; */
+  /* left: 80%; */
+  /* top: 20%; */
+  margin-left: 25px;
+}
+
+.landing-signup-button:hover, .landing-signin-button:hover {
+  color: white !important;
+  text-shadow: white 1px 0 10px;
+  border-color: white !important;
+  box-shadow: 0 0 5px white !important;
+  box-shadow: inner 0 0 5px white !important;
+}

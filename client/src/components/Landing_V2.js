@@ -7,8 +7,10 @@ export default function() {
     <>
       <div className="hero-area">
         <img className="hero-image" src="https://images.unsplash.com/photo-1534951474654-87823058c487?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1123&q=80"></img>
-        <button btn>Hello</button>
-        <button btn>There</button>
+        <div className="landing-button-group d-flex">
+          <button className="btn btn-outline-light bg-transparent shadow-sm landing-signup-button">Sign Up</button>
+          <button className="btn btn-outline-light bg-transparent shadow-sm landing-signin-button">Sign In</button>
+        </div>
       </div>
     </>
   );
