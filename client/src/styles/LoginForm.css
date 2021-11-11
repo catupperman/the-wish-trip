@@ -8,9 +8,14 @@
   color: whitesmoke;
   font-size: 1.25em;
   font-weight: 500;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .login-form-email-input, .login-form-password-input {
   margin-bottom: 10px;
+  border-color: whitesmoke;
+}
+
+.login-form-submit-button {
+  margin-top: 10px;
 }
