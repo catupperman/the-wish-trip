@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Flights from './components/Flights';
 import LoginForm from './components/LoginForm';
 import LandingPage from './components/Landing';
+import LandingPage_V2 from './components/Landing_V2';
 
 
 
@@ -47,8 +48,10 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <>
-          <Navbar />
-          <LandingPage />
+          {/* <Navbar /> */}
+          <Header />
+          <LandingPage_V2 />
+          <Footer />
           {/* <LoginForm /> */}
         </>
       </Router>
