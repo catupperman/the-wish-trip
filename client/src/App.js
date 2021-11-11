@@ -5,7 +5,11 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Flights from './components/Flights';
-import LoginForm from './components/LoginForm'
+import LoginForm from './components/LoginForm';
+import LandingPage from './components/Landing';
+
+
+
 import {
   ApolloClient,
   InMemoryCache,
@@ -45,6 +49,9 @@ function App() {
         <>
           <Header />
           <Footer />
+          <Navbar />
+          <LandingPage />
+          {/* <LoginForm /> */}
         </>
       </Router>
     </ApolloProvider>
