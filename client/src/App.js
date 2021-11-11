@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Flights from './components/Flights';
 import LoginForm from './components/LoginForm';
 import LandingPage from './components/Landing';
+import LandingPage_V2 from './components/Landing_V2';
 
 
 
@@ -17,6 +18,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import Landing_V2 from './components/Landing_V2';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -48,7 +50,7 @@ function App() {
       <Router>
         <>
           <Navbar />
-          <LandingPage />
+          <Landing_Page />
           {/* <LoginForm /> */}
         </>
       </Router>

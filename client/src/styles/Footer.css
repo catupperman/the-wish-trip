@@ -13,7 +13,7 @@ li {
 }
 
 /* CSS for making tiny bubbles of our photos */
-img {
+.icon-image {
   border-radius: 50%;
   max-height: 50px;
   max-width: 60px;
@@ -24,12 +24,13 @@ img {
   padding-top: 1em;
 }
 
-h5, p {
+.footer-brand-name, .footer-description, .icon-header  {
   color: whitesmoke;
 }
 
 .copyright-line {
   padding-left: 0em;
+  color: whitesmoke;
 }
 
 

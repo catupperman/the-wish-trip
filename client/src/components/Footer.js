@@ -7,7 +7,6 @@ export default function Footer() {
     <>
 
       {/* footer */}
-      <br/>
       <footer>
         <div className="container">
           
@@ -15,10 +14,10 @@ export default function Footer() {
 
             {/* left side */}
             <div className="col">
-              <h5>
+              <h5 className="footer-brand-name">
                 The Wish Trip
               </h5>
-              <p>
+              <p className="footer-description">
                 Let us help you turn your wish into a trip!
               </p>
             </div>
@@ -31,13 +30,13 @@ export default function Footer() {
               <ul className="icon-set d-flex">
                 
                 {/* Cat */}
-                <li><a href="https://github.com/catupperman" target="_blank"><img src="https://avatars.githubusercontent.com/u/84750356?v=4" alt="catupperman" title="Cat"/></a></li>
+                <li><a href="https://github.com/catupperman" target="_blank"><img className="icon-image" src="https://avatars.githubusercontent.com/u/84750356?v=4" alt="catupperman" title="Cat"/></a></li>
 
                 {/* John-Mark */}
-                <li><a href="https://github.com/Kalmnir" target="_blank"><img src="https://avatars.githubusercontent.com/u/84051952?v=4" alt="Kalmnir" title="John-Mark"/></a></li>
+                <li><a href="https://github.com/Kalmnir" target="_blank"><img className="icon-image" src="https://avatars.githubusercontent.com/u/84051952?v=4" alt="Kalmnir" title="John-Mark"/></a></li>
 
                 {/* Kira */}
-                <li><a href="https://github.com/j1741" target="_blank"><img src="https://avatars.githubusercontent.com/u/84889065?v=4" alt="J1741" title="Kira"/></a></li>
+                <li><a href="https://github.com/j1741" target="_blank"><img className="icon-image" src="https://avatars.githubusercontent.com/u/84889065?v=4" alt="J1741" title="Kira"/></a></li>
 
               </ul>
             </div>
