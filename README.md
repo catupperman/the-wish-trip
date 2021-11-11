@@ -1,16 +1,16 @@
 <h1 align="center"> The Wish Trip </h1>
 
 <p align="center">
-  <img width="460" height="300" src="">
+  <img width="460" height="300" src="images/mainpage.png">
 </p>
 
 
 <p align="center">
     <img src="https://img.shields.io/badge/Javascript-yellow" />
     <img src="https://img.shields.io/badge/express-orange" />
-    <img src="https://img.shields.io/badge/Sequelize-blue"  />
-    <img src="https://img.shields.io/badge/mySQL-blue"  />
-    <img src="https://img.shields.io/badge/dotenv-green" />
+    <img src="https://img.shields.io/badge/React-blue"  />
+    <img src="https://img.shields.io/badge/MongoDB-green"  />
+    <img src="https://img.shields.io/badge/node.js-green" />
 </p>
 
 ## Table of Contents
@@ -24,10 +24,10 @@
 
 
 ## Description
-> This project was built with the aspirations to build a full stack application, that would allow a user to fully interact with several avenues for travel all in one convienent app. With so many different sites, and choices for travel, the goal was to combine all the elements of a travel agent convienently in one place. 
+> This project was built with the aspirations to build a full stack application, that would allow a user to fully interact with several avenues for travel all in one convienent app. With so many different sites, and choices for travel, the goal was to combine all the elements of a travel agent convienently in one place. Check out our application [Here](https://the-wish-trip.herokuapp.com/)
 
 <p align="center">
-  <img width="560" height="400" src="">
+  <img width="560" height="400" src="images/demo.gif">
 </p>
 
 
@@ -62,6 +62,6 @@ Copyright (C) 2021 kira-cat-johnmark-shobair
 * email: Cat: catupperman@gmail.com, Kira: jseventeen41@gmail.com, John-Mark: jmsackett91@gmail.com
 * Prefered Contact: Email or GitHub
 <p align="center">
-  <img width="460" height="300" src = "">
+  <img width="460" height="300" src = "images/owl.gif">
 </p>
 
