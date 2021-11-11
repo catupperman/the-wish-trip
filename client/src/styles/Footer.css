@@ -1,0 +1,11 @@
+li {
+  list-style-type: none;
+}
+
+/* CSS for making tiny bubbles of our photos */
+img {
+  border-radius: 50%;
+  max-height: 50px;
+  max-width: 60px;
+  margin: 2px;
+}
