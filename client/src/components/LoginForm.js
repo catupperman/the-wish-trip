@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/LoginForm.css';
 
 import Auth from '../utils/auth';
 
@@ -41,12 +42,12 @@ const LoginForm = () => {
 
     return (
         <>
-            <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
+            <Form className="login-form" noValidate validated={validated} onSubmit={handleFormSubmit}>
                 <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
                     Something went wrong with your login credentials!
                 </Alert>
                 <Form.Group>
-                    <Form.Label htmlFor='email'>Email</Form.Label>
+                    <Form.Label className="login-form-email-label" htmlFor='email'>Email</Form.Label>
                     <Form.Control
                         type='text'
                         placeholder='Your email'
@@ -54,13 +55,15 @@ const LoginForm = () => {
                         onChange={handleInputChange}
                         value={userFormData.email}
                         required
+                        className="login-form-email-input"
                     />
                     <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
                 </Form.Group>
 
                 <Form.Group>
-                    <Form.Label htmlFor='password'>Password</Form.Label>
+                    <Form.Label className="login-form-password-label" htmlFor='password'>Password</Form.Label>
                     <Form.Control
+                        className="login-form-password-input"
                         type='password'
                         placeholder='Your password'
                         name='password'
@@ -71,6 +74,7 @@ const LoginForm = () => {
                     <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
                 </Form.Group>
                 <Button
+                    className="login-form-submit-button"
                     disabled={!(userFormData.email && userFormData.password)}
                     type='submit'
                     variant='success'>
