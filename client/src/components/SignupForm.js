@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import { useMutation } from '@apollo/react-hooks';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/SignupForm.css'
 
 import Auth from '../utils/auth';
 import { ADD_USER } from '../utils/mutations';
@@ -50,13 +51,13 @@ const SignupForm = () => {
 
     return (
         <>
-            <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
+            <Form className="signup-form" noValidate validated={validated} onSubmit={handleFormSubmit}>
                 <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
                     Something went wrong with your signup!
                 </Alert>
 
                 <Form.Group>
-                    <Form.Label className="signup-form-email-input" htmlFor='email'>Email</Form.Label>
+                    <Form.Label className="signup-form-email-label" htmlFor='email'>Email</Form.Label>
                     <Form.Control
                         type='email'
                         placeholder='Your email address'
@@ -64,12 +65,14 @@ const SignupForm = () => {
                         onChange={handleInputChange}
                         value={userFormData.email}
                         required
+                        className="signup-form-email-input"
                     />
                     <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
                 </Form.Group>
 
                 <Form.Group>
-                    <Form.Label htmlFor='password'>Password</Form.Label>
+                    <Form.Label
+                    className="signup-form-password-label" htmlFor='password'>Password</Form.Label>
                     <Form.Control
                     className="signup-form-password-input"
                         type='password'

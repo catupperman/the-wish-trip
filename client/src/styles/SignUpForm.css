@@ -1,23 +1,23 @@
-.login-form {
+.signup-form {
     position: absolute;
     top: 20%;
     left: 15%;
 }
 
-.login-form-email-label,
-.login-form-password-label {
+.signup-form-email-label,
+.signup-form-password-label {
     color: whitesmoke;
     font-size: 1.25em;
     font-weight: 500;
     margin-top: 5px;
 }
 
-.login-form-email-input,
-.login-form-password-input {
+.signup-form-email-input,
+.signup-form-password-input {
     margin-bottom: 10px;
     border-color: whitesmoke;
 }
 
-.login-form-submit-button {
+.signup-form-submit-button {
     margin-top: 10px;
 }
