@@ -37,9 +37,9 @@ const SignupForm = () => {
             const { token, user } = await response.json();
             console.log(user);
             Auth.login(token);
-        } catch (err) {
-            console.error(err);
-            setShowAlert(true);
+        } catch (e) {
+            console.error(e);
+            // setShowAlert(true);
         }
 
         setUserFormData({
@@ -56,7 +56,7 @@ const SignupForm = () => {
                 </Alert>
 
                 <Form.Group>
-                    <Form.Label htmlFor='email'>Email</Form.Label>
+                    <Form.Label className="signup-form-email-input" htmlFor='email'>Email</Form.Label>
                     <Form.Control
                         type='email'
                         placeholder='Your email address'
@@ -71,6 +71,7 @@ const SignupForm = () => {
                 <Form.Group>
                     <Form.Label htmlFor='password'>Password</Form.Label>
                     <Form.Control
+                    className="signup-form-password-input"
                         type='password'
                         placeholder='Your password'
                         name='password'
@@ -81,6 +82,7 @@ const SignupForm = () => {
                     <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
                 </Form.Group>
                 <Button
+                className="signup-form-submit-button"
                     disabled={!(userFormData.email && userFormData.password)}
                     type='submit'
                     variant='success'>
